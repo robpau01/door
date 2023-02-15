@@ -1,0 +1,22 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: door-test
+  namespace: production
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: door-test
+  template:
+    metadata:
+      name: door-test
+      labels:
+        k8s-app: door-test
+    spec:
+      containers:
+        - name: door-test
+          image: ccsadm/flask
+          env:
+          - name: FLASK_APP
+            value: "/door/door-test.py
