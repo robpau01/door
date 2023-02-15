@@ -35,4 +35,3 @@ def window():
                     <copyright>2002 - Martin</copyright>
                     </window>'''
 return Response(xml, mimetype='xml')"
-}
