@@ -1,0 +1,20 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: frontend-nginx-service
+  namespace: production
+spec:
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 32411
+  selector:
+    k8s-app: frontend-nginx
+  type: NodePort
+  sessionAffinity: None
+  externalTrafficPolicy: Cluster
+  ipFamilies:
+    - IPv4
+  ipFamilyPolicy: SingleStack
+  internalTrafficPolicy: Cluster
