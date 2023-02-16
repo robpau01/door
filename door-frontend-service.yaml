@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-web
+data:
+ index:
+  '<html>
+    <head>
+      <title>Shibuya rocks</title>
+    </head>
+    <body bgcolor="FFFFFF">
+Replace all html with javascript, html, css for our door!
+    </body>
+  </html>'
