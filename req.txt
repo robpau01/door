@@ -1,0 +1,6 @@
+Flask==2.2.2
+Flask-Cors==3.0.10
+Flask-Session==0.4.0
+websocket-client==0.53.0
+Werkzeug==2.2.2
+widgetsnbextension==3.6.1
