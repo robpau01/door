@@ -10,14 +10,14 @@ spec:
   template:
     metadata:
       labels:
-        app: frontend
+        app: frontend-nginx
     spec:
       containers:
       - image: nginx:latest
         name: frontend-nginx
         ports:
         - containerPort: 80
-          name: nginx-lab
+          name: frontend-nginx
         volumeMounts:
         - name: nginx-web
           mountPath: "/usr/share/nginx/html/"
