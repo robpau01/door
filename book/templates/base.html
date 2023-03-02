@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}- FlaskApp</title>
+    <style>
+        nav a {
+            color: #d64161;
+            font-size: 30px;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+           nav a:hover {
+             color: black; }
+
+
+        img {
+            margin-left: 10px;
+            margin-bottom: -25px;
+            text-decoration: none;
+        }
+
+        .book {
+            padding: 20px;
+            margin: 10px;
+            background-color: #f7f4f4;
+        }
+
+        .review {
+                margin-left: 50px;
+                font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="https://www.shibuya.se/images/18.79a18ddf17e930329076815/1622628314282/logo_shibuya.png" width="10%" height="10%">
+        <a href="{{ url_for('index') }}">Main</a>
+        <a href="{{ url_for('create') }}">create</a>
+        
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>
