@@ -1,0 +1,8 @@
+
+Flask
+Flask-Cors
+Flask-SQLAlchemy
+pyparsing
+SQLAlchemy
+psycopg2-binary
+Flask-Session
